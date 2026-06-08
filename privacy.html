@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Kitty Gaming</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #13131a;
+      --border: rgba(255,255,255,0.08);
+      --gold: #ffd700;
+      --gold-dim: #b8860b;
+      --text: #e8e8f0;
+      --muted: #8888a0;
+      --accent: #dc143c;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a0a00 0%, #0a0a0f 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .brand { font-size: 20px; font-weight: 800; color: var(--gold); letter-spacing: 0.3px; }
+    .brand span { color: var(--muted); font-weight: 400; font-size: 13px; display: block; }
+    nav { margin-left: auto; display: flex; gap: 20px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--gold); }
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(180deg, #1a0a00 0%, var(--bg) 100%);
+      padding: 56px 24px 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--gold), #fff5cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+    .hero p { color: var(--muted); font-size: 15px; max-width: 520px; margin: 0 auto 16px; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,215,0,0.1);
+      border: 1px solid rgba(255,215,0,0.25);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    /* ── Layout ── */
+    .container { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+    /* ── Section ── */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px;
+      margin-bottom: 20px;
+    }
+    .section-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 18px;
+    }
+    .section-icon {
+      width: 38px; height: 38px;
+      background: rgba(255,215,0,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .section p { color: var(--muted); margin-bottom: 12px; font-size: 15px; }
+    .section p:last-child { margin-bottom: 0; }
+    ul { list-style: none; padding: 0; }
+    ul li {
+      color: var(--muted);
+      font-size: 15px;
+      padding: 6px 0 6px 22px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    ul li:last-child { border-bottom: none; }
+    ul li::before {
+      content: '›';
+      position: absolute; left: 6px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    ul li strong { color: var(--text); }
+    /* ── Table ── */
+    .data-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    .data-table th {
+      text-align: left;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--gold);
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255,215,0,0.2);
+    }
+    .data-table td {
+      padding: 10px 12px;
+      font-size: 14px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .data-table td strong { color: var(--text); }
+    .data-table tr:last-child td { border-bottom: none; }
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(220,20,60,0.06));
+      border: 1px solid rgba(255,215,0,0.2);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    .contact-card h2 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .contact-card p { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+    .contact-card a { color: var(--gold); text-decoration: none; font-weight: 600; }
+    .contact-card a:hover { text-decoration: underline; }
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer a { color: var(--muted); text-decoration: none; margin: 0 10px; }
+    footer a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🃏</div>
+  <div class="brand">
+    Kitty Gaming
+    <span>by Kirosys</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy.html" class="active">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Privacy Policy</h1>
+  <p>We are committed to protecting your privacy. This policy explains what data we collect, why, and how we keep it safe.</p>
+  <span class="badge">Last updated: June 8, 2026</span>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">👤</div>
+      <h2>Who We Are</h2>
+    </div>
+    <p><strong style="color:#fff">Kitty Gaming</strong> is a mobile card-game platform developed and operated by <strong style="color:#fff">Kirosys</strong>. This application ("App") is available on Google Play Store and provides virtual card games including Teen Patti, Call Break, 28, and Kitty.</p>
+    <p>This Privacy Policy applies to all users of the Kitty Gaming mobile application. By using the App you agree to the practices described here.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📦</div>
+      <h2>Data We Collect</h2>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Data</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Account</strong></td>
+          <td>Name, email address, profile photo</td>
+          <td>Google Sign-In / Facebook Login / manual entry</td>
+        </tr>
+        <tr>
+          <td><strong>Game activity</strong></td>
+          <td>Game history, win/loss records, coin balance, streak data</td>
+          <td>Stored locally on your device (SQLite)</td>
+        </tr>
+        <tr>
+          <td><strong>Device</strong></td>
+          <td>Device type, OS version, app version, crash logs</td>
+          <td>Firebase Crashlytics / Analytics</td>
+        </tr>
+        <tr>
+          <td><strong>Photos</strong></td>
+          <td>Profile image selected from camera or gallery</td>
+          <td>Only when you explicitly choose to upload one</td>
+        </tr>
+        <tr>
+          <td><strong>Ad interactions</strong></td>
+          <td>Ad impressions, clicks, reward status</td>
+          <td>Google AdMob SDK</td>
+        </tr>
+        <tr>
+          <td><strong>Network</strong></td>
+          <td>Connectivity state (online/offline)</td>
+          <td>System API — not transmitted</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px">We do <strong style="color:#fff">not</strong> collect payment information, government IDs, precise location, or any real-money transaction data. All in-app coins are virtual and have no monetary value.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🎯</div>
+      <h2>How We Use Your Data</h2>
+    </div>
+    <ul>
+      <li><strong>Account authentication</strong> — log you in securely via Google or Facebook</li>
+      <li><strong>Profile display</strong> — show your name and avatar in the app</li>
+      <li><strong>Game experience</strong> — track your coins, streaks, history, and leaderboard rank</li>
+      <li><strong>Personalisation</strong> — remember your sound, theme, and bot-difficulty settings</li>
+      <li><strong>Advertising</strong> — show relevant ads via Google AdMob to support free gameplay</li>
+      <li><strong>App improvement</strong> — analyse crash reports and usage patterns to fix bugs</li>
+      <li><strong>Customer support</strong> — respond to your queries sent to our support email</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔗</div>
+      <h2>Third-Party Services</h2>
+    </div>
+    <p>The App integrates the following third-party SDKs, each governed by their own privacy policies:</p>
+    <ul>
+      <li><strong>Google Firebase</strong> — authentication, crash reporting, analytics</li>
+      <li><strong>Google Sign-In</strong> — OAuth 2.0 sign-in; governed by Google's Privacy Policy</li>
+      <li><strong>Facebook Login</strong> — OAuth sign-in; governed by Meta's Data Policy</li>
+      <li><strong>Google AdMob</strong> — ad delivery and measurement; may use device advertising ID</li>
+      <li><strong>Flutter audioplayers</strong> — local audio playback only; no data transmitted</li>
+    </ul>
+    <p style="margin-top:12px">We do not sell your personal data to any third party.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📍</div>
+      <h2>Data Storage &amp; Security</h2>
+    </div>
+    <p>Game history, settings, and coin balance are stored <strong style="color:#fff">locally on your device</strong> using SQLite. This data never leaves your phone unless you explicitly share it.</p>
+    <p>Authentication tokens (Google/Facebook) are managed by the respective SDKs using secure OS keychain storage.</p>
+    <p>We use industry-standard security measures on Firebase servers. No system is 100% secure; if you believe your account has been compromised, contact us immediately.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🎂</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <p>Kitty Gaming is intended for users aged <strong style="color:#fff">13 and above</strong>. We do not knowingly collect personal data from children under 13. If you believe a child has provided us with personal information, contact us and we will delete it promptly.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">⚖️</div>
+      <h2>Your Rights</h2>
+    </div>
+    <ul>
+      <li><strong>Access</strong> — request a copy of the data we hold about you</li>
+      <li><strong>Correction</strong> — ask us to correct inaccurate data</li>
+      <li><strong>Deletion</strong> — request deletion of your account and associated data</li>
+      <li><strong>Opt-out of ads</strong> — use your device's "Opt out of Ads Personalisation" setting</li>
+      <li><strong>Disconnect social login</strong> — revoke app access in your Google or Facebook account settings at any time</li>
+    </ul>
+    <p style="margin-top:12px">To exercise any of these rights, email us at <a href="mailto:support@kitty-gaming.com" style="color:var(--gold);font-weight:600">support@kitty-gaming.com</a>.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔄</div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. Material changes will be communicated via an in-app notification or a notice on this page. Continued use of the App after changes take effect constitutes your acceptance of the revised policy.</p>
+  </div>
+
+  <div class="contact-card">
+    <h2>📬 Contact Us</h2>
+    <p>Questions, concerns, or data-deletion requests? We respond within 24 hours.</p>
+    <p>
+      Email: <a href="mailto:support@kitty-gaming.com">support@kitty-gaming.com</a><br>
+      Website: <a href="https://kitty-gaming.com">https://kitty-gaming.com</a><br>
+      Developer: Kirosys, India
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Kirosys. All rights reserved.</p>
+  <p style="margin-top:8px">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="mailto:support@kitty-gaming.com">Contact</a>
+  </p>
+</footer>
+
+</body>
+</html>
