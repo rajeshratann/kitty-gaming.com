@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account – Kitty Gaming</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d0d1a;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .card {
+      background: #12121e;
+      border: 1px solid #2a2a3d;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      padding: 40px;
+    }
+    h1 { font-size: 26px; color: #fff; margin-bottom: 6px; }
+    .app-name { color: #7c6af7; font-weight: 700; }
+    .subtitle { color: #888; font-size: 14px; margin-bottom: 32px; }
+    h2 { font-size: 16px; color: #ccc; margin: 24px 0 10px; }
+    p, li { font-size: 14px; color: #aaa; line-height: 1.7; }
+    ol, ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .step-box {
+      background: #1a1a2e;
+      border-left: 3px solid #7c6af7;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .warn-box {
+      background: #2a0d0d;
+      border-left: 3px solid #e53935;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 13px;
+      color: #ff8a80;
+    }
+    .data-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .data-table th { text-align: left; font-size: 12px; color: #666; padding: 6px 8px; border-bottom: 1px solid #222; }
+    .data-table td { font-size: 13px; color: #aaa; padding: 8px; border-bottom: 1px solid #1c1c2e; }
+    .deleted { color: #e53935; }
+    .kept   { color: #ffb300; }
+    a { color: #7c6af7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 32px; font-size: 12px; color: #444; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Delete Account</h1>
+    <p class="app-name">Kitty Gaming</p>
+    <p class="subtitle">Developer: Kitty Gaming &nbsp;|&nbsp; App: Kitty – Card Games</p>
+
+    <h2>How to delete your account</h2>
+    <div class="step-box">
+      <ol>
+        <li>Open the <strong>Kitty</strong> app on your device.</li>
+        <li>Tap your <strong>profile avatar</strong> in the top corner of the dashboard.</li>
+        <li>Scroll to the bottom of the Profile screen.</li>
+        <li>Tap <strong>"Delete Account"</strong>.</li>
+        <li>Read the confirmation message and tap <strong>"Delete Forever"</strong>.</li>
+      </ol>
+    </div>
+    <p>Your account will be deleted immediately. You will be signed out and redirected to the login screen.</p>
+
+    <div class="warn-box">
+      ⚠️ This action is <strong>permanent and cannot be undone</strong>. All your data will be erased.
+    </div>
+
+    <h2>What data is deleted and what is kept</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data type</th>
+          <th>Action</th>
+          <th>Retention period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Profile (name, avatar)</td><td class="deleted">Deleted immediately</td><td>None</td></tr>
+        <tr><td>Game history &amp; stats</td><td class="deleted">Deleted immediately</td><td>None</td></tr>
+        <tr><td>Coins &amp; rewards</td><td class="deleted">Deleted immediately</td><td>None</td></tr>
+        <tr><td>Daily missions &amp; spin history</td><td class="deleted">Deleted immediately</td><td>None</td></tr>
+        <tr><td>Friends list</td><td class="deleted">Deleted immediately</td><td>None</td></tr>
+        <tr><td>Purchased themes</td><td class="deleted">Deleted immediately</td><td>None</td></tr>
+        <tr><td>Firebase Auth account</td><td class="deleted">Deleted immediately</td><td>None</td></tr>
+        <tr><td>Aggregated/anonymised analytics</td><td class="kept">May be retained</td><td>Up to 90 days (Google Analytics)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Can't access the app?</h2>
+    <p>
+      If you are unable to open the app, email us at
+      <a href="mailto:support@kittygaming.in">support@kittygaming.in</a>
+      with the subject line <strong>"Account Deletion Request"</strong> and include the name or
+      email address associated with your account. We will process your request within 7 business days.
+    </p>
+  </div>
+
+  <footer>© 2025 Kitty Gaming. All rights reserved.</footer>
+</body>
+</html>
